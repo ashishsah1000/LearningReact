@@ -1,0 +1,70 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+body {
+  margin: 0;
+  color: violet;
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.m-todo {
+  height: auto;
+  width: 60%;
+  margin: 0px auto;
+  background-color: ghostwhite;
+  padding: 20px 20px;
+  border-radius: 4px;
+  color: rgba(22, 22, 22, 0.9);
+  margin-bottom: 10px;
+  text-align: left;
+  -webkit-box-shadow: -1px 0px 21px 0px rgba(21, 50, 50, 0.48);
+  -moz-box-shadow: -1px 0px 21px 0px rgba(21, 50, 50, 0.48);
+  box-shadow: -1px 0px 21px 0px rgba(21, 50, 50, 0.48);
+}
+
+/* styling of the profile */
+
+.profile {
+  height: 200px;
+  width: 400px;
+
+  overflow: hidden;
+  border-radius: 4px;
+  float: left;
+  margin: 10px 10px 10px 10px;
+  -webkit-box-shadow: -1px 0px 21px 0px rgba(21, 50, 50, 0.48);
+  -moz-box-shadow: -1px 0px 21px 0px rgba(21, 50, 50, 0.48);
+  box-shadow: -1px 0px 21px 0px rgba(21, 50, 50, 0.48);
+}
+.c-profile{
+  height:100%;
+  width: 100%;
+  transition: .5s ease;
+}
+.c-profile:hover{
+  background: rgb(241, 195, 176);
+  color:rgba(222,222,222,.6);
+  cursor:pointer;
+}
+.c-profile div{
+  float:left;
+}
+.p-top {
+  height: 100%;
+  width: 40%;
+  background: url("https://picsum.photos/200/300/?blur");
+  background-size: cover;
+  border-bottom: 2px solid orangered;
+  overflow: hidden;
+}
+.p-bottom {
+  height: 100%;
+  width: 50%;
+
+  padding: 2px 9px;
+  text-align: left;
+  color: rgba(22, 22, 22, 0.9);
+  font-size: 18px;
+  overflow: hidden;
+  
+}
