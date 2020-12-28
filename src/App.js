@@ -9,15 +9,15 @@ import LearnState from "./components/LearnState";
 
 // this Cdata will return componets of profile from main data page
 
-// var Cdata = Data.map(function (params) {
-//   return (
-//     <Profile
-//       first_name={params.first_name}
-//       last_name={params.last_name}
-//       ip_address={params.ip_address}
-//     />
-//   );
-// });
+var Cdata = Data.map(function (params) {
+  return (
+    <Profile
+      first_name={params.first_name}
+      last_name={params.last_name}
+      ip_address={params.ip_address}
+    />
+  );
+});
 
 class App extends React.Component {
   render() {
@@ -26,6 +26,7 @@ class App extends React.Component {
         <Nav />
         <LearnState UserName="Ashish Sah" />
         {/* <Todo /> */}
+        {Cdata}
       </div>
     );
   }
