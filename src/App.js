@@ -4,6 +4,7 @@ import "./styles.css";
 import Todo from "./components/Todo";
 import Nav from "./components/Nav";
 import Profile from "./components/Profile";
+import Example from "./components/Example";
 import Data from "./Data/Data";
 import LearnState from "./components/LearnState";
 
@@ -23,10 +24,11 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Nav />
-        <LearnState UserName="Ashish Sah" />
+        {/* <Nav /> */}
+        {/* <LearnState UserName="Ashish Sah" /> */}
         {/* <Todo /> */}
-        {Cdata}
+        {/* {Cdata} */}
+        <Example />
       </div>
     );
   }
