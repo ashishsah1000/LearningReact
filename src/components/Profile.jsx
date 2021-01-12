@@ -4,13 +4,13 @@ class Profile extends React.Component {
   constructor() {
     super();
     this.state = this.props;
+    this.getData = this.getData.bind(this);
+  }
+  getData(e) {
+    console.log(this.props.first_name);
   }
 
   render() {
-    console.log(this.state);
-    function getData(e) {
-      console.log(e);
-    }
     return (
       <div className="profile">
         <div className="c-profile">
@@ -25,7 +25,7 @@ class Profile extends React.Component {
             <p>
               <span>IP Adress : {this.props.ip_address}</span>
             </p>
-            <button onClick={getData(this)}>Know Info</button>
+            <button onClick={this.getData}>Know Info</button>
           </div>
         </div>
       </div>

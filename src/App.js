@@ -27,7 +27,7 @@ class App extends React.Component {
         {/* <Nav /> */}
         {/* <LearnState UserName="Ashish Sah" /> */}
         {/* <Todo /> */}
-        {/* {Cdata} */}
+        {Cdata}
         <Example />
       </div>
     );
