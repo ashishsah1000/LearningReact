@@ -7,6 +7,7 @@ import Profile from "./components/Profile";
 import Example from "./components/Example";
 import Data from "./Data/Data";
 import LearnState from "./components/LearnState";
+import Event from "./components/Event";
 
 // this Cdata will return componets of profile from main data page
 
@@ -27,8 +28,9 @@ class App extends React.Component {
         {/* <Nav /> */}
         {/* <LearnState UserName="Ashish Sah" /> */}
         {/* <Todo /> */}
-        {Cdata}
+        {/* {Cdata} */}
         <Example />
+        <Event username="Flekenstine" />
       </div>
     );
   }
