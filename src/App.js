@@ -27,10 +27,10 @@ class App extends React.Component {
       <div>
         {/* <Nav /> */}
         {/* <LearnState UserName="Ashish Sah" /> */}
-        {/* <Todo /> */}
+        <Todo />
         {/* {Cdata} */}
-        <Example />
-        <Event username="Flekenstine" />
+        {/* <Example /> */}
+        {/* <Event username="Flekenstine" /> */}
       </div>
     );
   }
