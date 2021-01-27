@@ -3,7 +3,7 @@ function Option(props) {
   return (
     <div
       className="m-todo"
-      style={{ backgroundColor: props.user ? "orangeRed" : "green" }}
+      style={{ backgroundColor: !props.param ? "orangeRed" : "green" }}
     >
       <p style={{ color: "white", fontSize: 18 }}>
         <input

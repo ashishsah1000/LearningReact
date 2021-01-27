@@ -7,19 +7,22 @@ const Obj = [
     id: 1,
     userId: 123,
     name: "This is the simple example of props",
-    user: "prem"
+    user: "prem",
+    param: true
   },
   {
     id: 2,
     userId: 124,
     name: "The any data format lies here",
-    user: "Awesome user"
+    user: "Awesome user",
+    param: false
   },
   {
     id: 3,
     userId: 125,
     name: "Life is here at jamshedpur",
-    user: ""
+    user: "Someone",
+    param: true
   }
 ];
 // data of the todo list
@@ -33,8 +36,21 @@ class Todo extends React.Component {
     this.Change = this.Change.bind(this);
   }
   Change = (id) => {
-    console.log("Changed", id);
-    return 0;
+    this.setState((prev) => {
+      let newArr = prev.components.map((x) => {
+        if (x.userId === id) {
+          console.log(x);
+          if (x.param === true) {
+            x.param = !x.param;
+            console.log("ha bhai ho gaya", x.param);
+          } else x.param = true;
+          console.log(x);
+        }
+        return x;
+      });
+      return { components: newArr };
+    });
+    console.log("Changed" + id + " " + this.state.components.param);
   };
 
   render() {
@@ -46,6 +62,7 @@ class Todo extends React.Component {
           name={obj.name}
           user={obj.user}
           Change={this.Change}
+          param={obj.param}
         />
       );
     });
