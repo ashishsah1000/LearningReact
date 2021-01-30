@@ -1,72 +1,58 @@
 import React from "react";
-import { render } from "react-dom";
-
+// import Data from "../Data/Data";
 import Option from "./Option";
-const Obj = [
+import AddTodo from "./AddTodo";
+
+var CreatedData = [
   {
     id: 1,
-    userId: 123,
-    name: "This is the simple example of props",
-    user: "prem",
-    param: true
+    job: "Break time",
+    text: "This is a random discription",
+    color: "white"
   },
   {
     id: 2,
-    userId: 124,
-    name: "The any data format lies here",
-    user: "Awesome user",
-    param: false
-  },
-  {
-    id: 3,
-    userId: 125,
-    name: "Life is here at jamshedpur",
-    user: "Someone",
-    param: true
+    job: "bring wheat",
+    text: "This is a random discription",
+    color: "white"
   }
 ];
-// data of the todo list
-
 class Todo extends React.Component {
   constructor() {
     super();
     this.state = {
-      components: Obj
+      components: CreatedData
     };
-    this.Change = this.Change.bind(this);
+    // this.Change = this.Change.bind(this);
   }
-  Change = (id) => {
-    this.setState((prev) => {
-      let newArr = prev.components.map((x) => {
-        if (x.userId === id) {
-          console.log(x);
-          if (x.param === true) {
-            x.param = !x.param;
-            console.log("ha bhai ho gaya", x.param);
-          } else x.param = true;
-          console.log(x);
-        }
-        return x;
-      });
-      return { components: newArr };
-    });
-    console.log("Changed" + id + " " + this.state.components.param);
-  };
+  // Change = (id) => {
+  //   this.setState((prev) => {
+  //     let newArr = prev.components.map((x) => {
+  //       if (x.userId === id) {
+  //         console.log(x);
+  //         if (x.param === true) {
+  //           x.param = !x.param;
+  //           console.log("ha bhai ho gaya", x.param);
+  //         } else x.param = true;
+  //         console.log(x);
+  //       }
+  //       return x;
+  //     });
+  //     return { components: newArr };
+  //   });
+  //   console.log("Changed" + id + " " + this.state.components.param);
+  // };
 
   render() {
-    var Components = this.state.components.map((obj) => {
-      return (
-        <Option
-          key={obj.id}
-          userId={obj.userId}
-          name={obj.name}
-          user={obj.user}
-          Change={this.Change}
-          param={obj.param}
-        />
-      );
+    var list = this.state.components.map((x) => {
+      return <Option key={x.id} job={x.job} text={x.text} color={x.color} />;
     });
-    return <div>{Components}</div>;
+    return (
+      <div>
+        {list}
+        <AddTodo />
+      </div>
+    );
   }
 }
 
