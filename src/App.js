@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.css";
+import "materialize-css/dist/css/materialize.min.css";
 
 import Todo from "./components/Todo";
 import Nav from "./components/Nav";
