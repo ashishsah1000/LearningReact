@@ -47,12 +47,12 @@ class Todo extends React.Component {
   //   console.log("Changed" + id + " " + this.state.components.param);
   // };
 
-  addElement = (Job, Text) => {
+  addElement = (Job, Text, Color) => {
     var ele = {
       id: Math.random() * 10,
       job: Job,
       text: Text,
-      color: "purple",
+      color: Color,
       nId: Math.random() * 10
     };
     CreatedData.push(ele);

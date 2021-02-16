@@ -1,11 +1,14 @@
 import React from "react";
 
 function AddTodo(props) {
+  var z = "";
+  function Color(x) {
+    z = x;
+  }
   function handleClick() {
     var x = document.querySelector(".job").value;
     var y = document.querySelector(".disc").value;
-
-    props.addElement(x, y);
+    if (x !== "" && y !== "" && z !== "") props.addElement(x, y, z);
   }
   return (
     <div className="col s12 m3">
@@ -22,14 +25,42 @@ function AddTodo(props) {
               type="text"
             />
           </div>
-          <button
-            className="btn waves-effect waves-light"
-            onClick={handleClick}
-            style={{ background: "red" }}
-          >
-            {" "}
-            Add job +{" "}
-          </button>
+          <div className=" col s12">
+            <spam
+              class="m_chip"
+              onClick={() => {
+                Color("red");
+              }}
+            >
+              Prior
+            </spam>
+            <spam
+              class="m_chip"
+              onClick={() => {
+                Color("yellow");
+              }}
+            >
+              Medium
+            </spam>
+            <spam
+              class="m_chip"
+              onClick={() => {
+                Color("green");
+              }}
+            >
+              Comfortable
+            </spam>
+          </div>
+          <div className=" col s12">
+            <button
+              className="btn waves-effect waves-light"
+              onClick={handleClick}
+              style={{ background: "red", marginTop: 20 }}
+            >
+              {" "}
+              Add job +{" "}
+            </button>
+          </div>
         </div>
       </div>
     </div>
